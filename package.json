@@ -1,0 +1,44 @@
+{
+  "name": "@competec/yarn-audit-competec",
+  "version": "1.0.0",
+  "description": "Competec Audit-Modules",
+  "keywords": [
+    "yarn audit",
+    "supressions",
+    "competec"
+  ],
+  "files": [
+    "src/*"
+  ],
+  "bin": {
+    "audit-competec": "./bin/yarn-audit-competec.js"
+  },
+  "author": "Francis C. / Competec",
+  "main": "src/utils/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@competec/eslint-config-competec": "^2.5.0",
+    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/github": "^5.5.5",
+    "eslint": "^6.3.0",
+    "fs-extra": "^10.1.0",
+    "husky": "^4.2.5",
+    "semantic-git-commit-cli": "^3.6.0",
+    "semantic-release": "^17.0.7"
+  },
+  "scripts": {
+    "reset": "rm -rf ./node_modules && yarn",
+    "lint": "eslint src/*.js",
+    "audit:competec": "node src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Competec/yarn-audit-competec.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Competec/yarn-audit-competec.git/issues"
+  },
+  "homepage": "https://github.com/Competec/yarn-audit-competec.git"
+}

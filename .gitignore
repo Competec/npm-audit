@@ -1,0 +1,7 @@
+# Folders
+node_modules
+
+.idea
+.yarn-audit-competec
+yarn-audit-competec.iml
+yarn-error.log
