@@ -16,7 +16,7 @@ This module is built on the original yarn audit command `yarn audit`. With the f
 
 ## Suppression file
 
-The suppression file `.npm-audit-suppressions.js` should be places in the root folder of your project and structured as follows:
+The suppression file `.yarn-audit-suppressions.js` should be places in the root folder of your project and structured as follows:
 
 ```
 module.exports = {

@@ -1,5 +1,5 @@
 {
-  "name": "@competec/npm-audit",
+  "name": "yarn-audit-competec",
   "version": "1.0.0",
   "description": "Competec Audit-Modules",
   "keywords": [
@@ -14,32 +14,17 @@
   "main": "src/utils/index.js",
   "license": "MIT",
   "devDependencies": {
-    "@semantic-release/git": "^7.0.18",
-    "@semantic-release/github": "^5.5.5",
-    "eslint": "^6.3.0",
-    "fs-extra": "^10.1.0",
-    "husky": "^4.2.5",
-    "semantic-git-commit-cli": "^3.6.0",
-    "semantic-release": "^17.0.7"
+    "fs-extra": "^10.1.0"
   },
   "scripts": {
-    "reset": "rm -rf ./node_modules && yarn",
-    "lint": "eslint *.js",
-    "lint-fix": "eslint *.js --fix",
-    "commit": "BRANCH=$(git rev-parse --abbrev-ref HEAD | grep -oP '.*((?:VOR|DEV|DO|SEARCH|SHOP3)-[0-9]+)' || git rev-parse --abbrev-ref HEAD);sgc -s $(echo $BRANCH | sed -r \"s/\\x1B\\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g\")",
-    "gbc": "git add . && yarn commit"
+    "reset": "rm -rf ./node_modules && yarn"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Competec/eslint-config-competec.git"
+    "url": "https://github.com/Competec/yarn-audit-competec.git"
   },
   "bugs": {
-    "url": "https://github.com/Competec/eslint-config-competec/issues"
+    "url": "https://github.com/Competec/yarn-audit-competec.git/issues"
   },
-  "homepage": "https://github.com/Competec/eslint-config-competec/issues#readme",
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  }
+  "homepage": "https://github.com/Competec/yarn-audit-competec.git",
 }
