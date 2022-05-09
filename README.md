@@ -37,4 +37,32 @@ module.exports = {
 * suppress.reason: A note for yourself, to remember why you are suppressing this advisory
 
 
-## Suppression file
+## Audit summary
+An audit summary is generated in JSON format and is structured as follows:
+
+* ts: The timestamp at which the audit took place
+* summary.vulnerabilities: a map of all severity levels found and the frequencies
+* summary.dependencies: the number of modules with advisories in the dependencies
+* summary.devDependencies: the number of modules with advisories in the devDependencies
+* summary.optionalDependencies: the number of modules with advisories in the optionalDependencies
+* summary.totalDependencies: the total number of modules with advisories
+
+Example of audit summary:
+```
+{
+  "ts": 1652107729515,
+  "summary": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0
+    },
+    "dependencies": 4,
+    "devDependencies": 0,
+    "optionalDependencies": 0,
+    "totalDependencies": 4
+  }
+}
+```
