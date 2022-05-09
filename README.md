@@ -11,7 +11,7 @@ This module is built on the original yarn audit command `yarn audit`. With the f
 3. Add the following script to your package.json
 
 ```
-"yarn:audit": "yarn competec-yarn-audit",
+"audit:competec": "yarn competec-yarn-audit",
 ```
 
 ## Suppression file
@@ -35,3 +35,6 @@ module.exports = {
 * githubAadvisoryId: The Github Advisory ID of the entry you wish to suppress
 * suppress.until: The validity of the grace period until this audit is finished with error
 * suppress.reason: A note for yourself, to remember why you are suppressing this advisory
+
+
+## Suppression file

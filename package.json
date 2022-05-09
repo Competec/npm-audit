@@ -17,7 +17,8 @@
     "fs-extra": "^10.1.0"
   },
   "scripts": {
-    "reset": "rm -rf ./node_modules && yarn"
+    "reset": "rm -rf ./node_modules && yarn",
+    "audit:competec": "node bin/yarn-audit-competec.js"
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,5 @@
   "bugs": {
     "url": "https://github.com/Competec/yarn-audit-competec.git/issues"
   },
-  "homepage": "https://github.com/Competec/yarn-audit-competec.git",
+  "homepage": "https://github.com/Competec/yarn-audit-competec.git"
 }
