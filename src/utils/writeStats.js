@@ -1,6 +1,5 @@
 const fs = require('fs-extra')
 const config = require('../config');
-const logger = require('./logger');
 
 module.exports = ({auditData}) => {
     fs.outputFileSync(

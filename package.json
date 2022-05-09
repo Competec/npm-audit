@@ -8,10 +8,10 @@
     "competec"
   ],
   "files": [
-    "bin/*"
+    "src/*"
   ],
   "author": "Francis C. / Competec",
-  "main": "bin/index.js",
+  "main": "src/utils/index.js",
   "license": "MIT",
   "devDependencies": {
     "@semantic-release/git": "^7.0.18",
