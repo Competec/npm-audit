@@ -26,7 +26,7 @@
     "fs-extra": "^10.1.0",
     "husky": "^4.2.5",
     "semantic-git-commit-cli": "^3.6.0",
-    "semantic-release": "^19.0.2"
+    "semantic-release": "18.0.1"
   },
   "scripts": {
     "reset": "rm -rf ./node_modules && yarn",
