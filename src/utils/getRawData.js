@@ -12,5 +12,5 @@ module.exports = ({rawReportFile}) => {
     }
 
     logger.error(`Cannot load raw report file at: ${rawReportFile}`, null, error);
-    return '';
+    process.exit(1);
 };

@@ -10,7 +10,6 @@ const rootPath = process.cwd();
 module.exports = async () => {
     try {
         tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), config.APP_PREFIX));
-        // the rest of your app goes here
     } catch {
         throw new Error('Cannot access tmpdir on O.S');
     }

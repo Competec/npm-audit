@@ -11,14 +11,14 @@ module.exports = ({suppressionList, auditAdvisory}) => {
     const supressionData = suppressionList.find(({githubAadvisoryId}) => githubAadvisoryId === advisory.github_advisory_id);
 
     if (!supressionData?.suppress) {
-        logger.error(`An advisory has been found. You can suppress this in ${config.SUPPRESSION_FILE}`, logData)
+        logger.warn(`An advisory has been found. You can suppress this in ${config.SUPPRESSION_FILE}`, logData);
         return false;
     }
 
     const isSuppressed = new Date(supressionData.suppress?.until).getTime() > Date.now();
 
     if (!isSuppressed) {
-        logger.error('Suppression has expired!', logData)
+        logger.warn('Suppression has expired!', logData)
     }
 
     return isSuppressed;

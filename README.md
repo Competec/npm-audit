@@ -11,12 +11,12 @@ This module is built on the original yarn audit command `yarn audit`. With the f
 3. Add the following script to your package.json
 
 ```
-"audit:competec": "yarn audit:competec",
+"audit:competec": "yarn audit-competec",
 ```
 
 ## Suppression file
 
-The suppression file `.yarn-audit-suppressions.js` should be places in the root folder of your project and structured as follows:
+The suppression file `~/.yarn-audit-competec/suppressions.js` should be places in the folder `.yarn-audit-competec`, which should be located at the root of your project and structured as follows:
 
 ```
 module.exports = {
