@@ -1,0 +1,14 @@
+{
+    "extends": [
+        "@competec/eslint-config-competec"
+    ],
+    "rules": {
+        "strict": "off",
+        "global-require": "off",
+        "max-len": "off",
+        "no-process-exit": "off"
+    },
+    "env": {
+        "node": true
+    }
+}

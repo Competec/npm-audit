@@ -1,6 +1,6 @@
 {
-  "name": "yarn-audit-competec",
-  "version": "1.2.0",
+  "name": "@competec/yarn-audit-competec",
+  "version": "1.0.0",
   "description": "Competec Audit-Modules",
   "keywords": [
     "yarn audit",
@@ -11,16 +11,19 @@
     "src/*"
   ],
   "bin": {
-    "yarn-audit-competec": "./bin/yarn-audit-competec.js"
+    "audit-competec": "./bin/yarn-audit-competec.js"
   },
   "author": "Francis C. / Competec",
   "main": "src/utils/index.js",
   "license": "MIT",
   "devDependencies": {
+    "@competec/eslint-config-competec": "^2.5.0",
+    "eslint": "^7.32.0",
     "fs-extra": "^10.1.0"
   },
   "scripts": {
     "reset": "rm -rf ./node_modules && yarn",
+    "lint": "eslint src/*.js",
     "audit:competec": "node bin/yarn-audit-competec.js"
   },
   "repository": {

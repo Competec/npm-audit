@@ -11,7 +11,7 @@ This module is built on the original yarn audit command `yarn audit`. With the f
 3. Add the following script to your package.json
 
 ```
-"audit:competec": "yarn competec-yarn-audit",
+"audit:competec": "yarn audit:competec",
 ```
 
 ## Suppression file
@@ -70,4 +70,3 @@ Example of audit summary:
 Version history
 
 * 1.0.0: Initial release
-* 1.1.0: Fix binary reference error

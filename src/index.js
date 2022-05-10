@@ -8,13 +8,18 @@ let data;
 const main = async () => {
     try {
         data = require(config.SUPPRESSION_FILE);
+        // eslint-disable-next-line no-empty
     } catch (e) {}
+
+    if (!data) {
+        logger.error(`Cannot find suppression file in this project. Please create one here => ${config.SUPPRESSION_FILE}. See our README.md for more details.`);
+        process.exit(1);
+    }
 
     const suppressionList = data?.list;
     if (!Array.isArray(suppressionList)) {
-        logger.error(`Cannot find suppression file in this project. Please create one here => ${config.SUPPRESSION_FILE}. See our README.md for more details.`)
+        logger.error(`The suppression file ${config.SUPPRESSION_FILE} is invalid. See our README.md for more details.`);
         process.exit(1);
-        return;
     }
 
     try {
@@ -29,7 +34,7 @@ const main = async () => {
 
         cleanupAudit({tmpDir});
     } catch (error) {
-        console.error(error);
+        logger.error(`Unknown error occured`, null, error);
     }
 };
 
