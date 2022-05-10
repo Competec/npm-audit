@@ -26,7 +26,6 @@ jobs:
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   publish-github-package:
     if: contains(github.ref, 'master')
@@ -45,7 +44,7 @@ jobs:
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
           git checkout "${GITHUB_REF:11}"
           git pull
-          if [[ "$(git log -1 --pretty=%B)" =~ "chore(RELEASE):" ]]; then npm publish; fi
+          if [[ "$(git log -1 --pretty=%B)" =~ "chore(RELEASE):" ]]; then npm publish --access public; fi
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
