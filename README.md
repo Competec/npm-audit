@@ -6,7 +6,7 @@ This module is built on the original yarn audit command `yarn audit`. With the f
 
 ## Installation
 
-1. Install the npm audit module (`yarn add @competec/npm-audit`)
+1. Install the npm audit module (`yarn add yarn-audit-competec`)
 2. Add the suppression file
 3. Add the following script to your package.json
 
@@ -66,3 +66,8 @@ Example of audit summary:
   }
 }
 ```
+
+Version history
+
+* 1.0.0: Initial release
+* 1.1.0: Fix binary reference error

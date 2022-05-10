@@ -1,6 +1,6 @@
 {
   "name": "yarn-audit-competec",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Competec Audit-Modules",
   "keywords": [
     "yarn audit",
@@ -10,6 +10,9 @@
   "files": [
     "src/*"
   ],
+  "bin": {
+    "competec-yarn-audit": "./src/index.js"
+  },
   "author": "Francis C. / Competec",
   "main": "src/utils/index.js",
   "license": "MIT",
