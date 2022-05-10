@@ -18,8 +18,15 @@
   "license": "MIT",
   "devDependencies": {
     "@competec/eslint-config-competec": "^2.5.0",
-    "eslint": "^7.32.0",
-    "fs-extra": "^10.1.0"
+    "fs-extra": "^10.1.0",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@semantic-release/git": "^7.0.18",
+    "@semantic-release/github": "^5.5.5",
+    "eslint": "^6.3.0",
+    "husky": "^4.2.5",
+    "semantic-git-commit-cli": "^3.6.0",
+    "semantic-release": "^17.0.7"
   },
   "scripts": {
     "reset": "rm -rf ./node_modules && yarn",
