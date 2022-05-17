@@ -34,14 +34,8 @@ const main = async () => {
 
         cleanupAudit({tmpDir});
     } catch (error) {
-        logger.error(`Unknown error occured`, null, error);
+        logger.error('Unknown error occured', null, error);
     }
 };
 
-main()
-    .then(() => {
-        logger.info('Done');
-    })
-    .catch(() => {
-        logger.error('Done');
-    });
+main();

@@ -2,6 +2,7 @@
   "name": "@competec/yarn-audit-competec",
   "version": "1.0.0",
   "description": "Competec Audit-Modules",
+  "private": false,
   "keywords": [
     "yarn audit",
     "supressions",
@@ -40,5 +41,9 @@
   "bugs": {
     "url": "https://github.com/Competec/yarn-audit-competec.git/issues"
   },
-  "homepage": "https://github.com/Competec/yarn-audit-competec.git"
+  "homepage": "https://github.com/Competec/yarn-audit-competec.git",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
