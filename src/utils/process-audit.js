@@ -42,7 +42,7 @@ module.exports = ({suppressionList, tmpDir}) => {
         writeStats({auditData});
 
         if (failedAudits.length > 0) {
-            console.error(`Unhandled advisories were found for ${failedAudits.length} node_modules.`);
+            logger.error(`Unhandled advisories were found for ${failedAudits.length} node_modules.`);
             process.exit(1);
         }
     } catch (error) {
