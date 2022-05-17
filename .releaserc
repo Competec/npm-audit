@@ -8,8 +8,5 @@
       "assets": ["package.json"],
       "message": "chore(RELEASE): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
     }]
-  ],
-  "parserOpts": {
-    "mergePattern": "Merged PR .*:"
-  }
+  ]
 }

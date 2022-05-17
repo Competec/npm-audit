@@ -38,4 +38,10 @@ const main = async () => {
     }
 };
 
-main();
+main()
+    .then(() => {
+        logger.info('Done');
+    })
+    .catch(() => {
+        logger.error('Done');
+    });
