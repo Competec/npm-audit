@@ -70,3 +70,4 @@ Example of audit summary:
 Version history
 
 * 1.0.0: Initial release
+* 1.0.1: Ignore licence check
