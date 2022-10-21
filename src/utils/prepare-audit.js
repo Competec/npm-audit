@@ -14,16 +14,22 @@ module.exports = async () => {
         throw new Error('Cannot access tmpdir on O.S');
     }
 
-    await new Promise((resolve, reject) => {
-        exec(`cd ${rootPath}; yarn audit --level info --json > ${tmpDir}/${config.REPORT_RAW_FILE}`, (error, stdout, stderr) => {
-            if (!stderr) {
-                resolve();
-                return;
-            }
+    try {
+        await new Promise((resolve, reject) => {
+            exec(`cd ${rootPath}; yarn audit --level info --json > ${tmpDir}/${config.REPORT_RAW_FILE}`, (error, stdout, stderr) => {
+                if (!stderr) {
+                    resolve();
+                    return;
+                }
 
-            reject(stderr);
+                reject(stderr);
+            });
         });
-    });
+    } catch (error) {
+        if (error.indexOf('package.json: No license field') < 0) {
+            throw new Error(error);
+        }
+    }
 
     return {
         tmpDir,
