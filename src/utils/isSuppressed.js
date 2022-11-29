@@ -5,10 +5,11 @@ module.exports = ({suppressionList, auditAdvisory}) => {
     const {advisory} = auditAdvisory;
     const logData = {
         findings: advisory.findings,
-        githubAadvisoryId: advisory.github_advisory_id,
+        githubAdvisoryId: advisory.github_advisory_id,
     };
 
-    const supressionData = suppressionList.find(({githubAadvisoryId}) => githubAadvisoryId === advisory.github_advisory_id);
+    const supressionData = suppressionList.find(({githubAadvisoryId}) =>
+        githubAadvisoryId === advisory.github_advisory_id || githubAdvisoryId === advisory.github_advisory_id);
 
     if (!supressionData?.suppress) {
         logger.warn(`An advisory has been found. You can suppress this in ${config.SUPPRESSION_FILE}`, logData);
