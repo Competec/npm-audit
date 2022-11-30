@@ -8,7 +8,7 @@ module.exports = ({suppressionList, auditAdvisory}) => {
         githubAdvisoryId: advisory.github_advisory_id,
     };
 
-    const supressionData = suppressionList.find(({githubAadvisoryId}) =>
+    const supressionData = suppressionList.find(({githubAadvisoryId, githubAdvisoryId}) =>
         githubAadvisoryId === advisory.github_advisory_id || githubAdvisoryId === advisory.github_advisory_id);
 
     if (!supressionData?.suppress) {
@@ -19,7 +19,7 @@ module.exports = ({suppressionList, auditAdvisory}) => {
     const isSuppressed = new Date(supressionData.suppress?.until).getTime() > Date.now();
 
     if (!isSuppressed) {
-        logger.warn('Suppression has expired!', logData)
+        logger.warn('Suppression has expired!', logData);
     }
 
     return isSuppressed;

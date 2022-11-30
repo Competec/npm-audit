@@ -32,7 +32,8 @@
   "scripts": {
     "reset": "rm -rf ./node_modules && yarn",
     "lint": "eslint src/*.js",
-    "audit:competec": "node src"
+    "audit:competec": "node src",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -45,5 +46,8 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "jest": "^29.3.1"
   }
 }
