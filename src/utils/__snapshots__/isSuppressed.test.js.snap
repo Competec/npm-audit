@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return a logger with info: Suppression has expired... 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "Suppression has expired!",
+      Object {
+        "findings": "test",
+        "githubAdvisoryId": "GHSA-hjp8-2cm3-cc45",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`should return true 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "An advisory has been found. You can suppress this in /Users/monikamalecka/shop3/yarn-audit-competec/.yarn-audit-competec/suppressions.js",
+      Object {
+        "findings": "test",
+        "githubAdvisoryId": "GHSA-hjp8-2cm3-cc45",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
