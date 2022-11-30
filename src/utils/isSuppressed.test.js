@@ -71,7 +71,7 @@ test('should return a logger with info: An advisory has been found...', () => {
     };
 
     isSuppressed({suppressionList, auditAdvisory});
-    expect(mockedLogger.warn).toMatchSnapshot();
+    expect(mockedLogger.warn.mock.calls).toMatchSnapshot();
 });
 
 test('should return a logger with info: Suppression has expired...', () => {
@@ -94,5 +94,5 @@ test('should return a logger with info: Suppression has expired...', () => {
     };
 
     isSuppressed({suppressionList, auditAdvisory});
-    expect(mockedLogger.warn).toMatchSnapshot();
+    expect(mockedLogger.warn.mock.calls).toMatchSnapshot();
 });
