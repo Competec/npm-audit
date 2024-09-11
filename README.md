@@ -22,7 +22,7 @@ The suppression file `~/.yarn-audit-competec/suppressions.js` should be places i
 module.exports = {
     list: [
         {
-            githubAadvisoryId: 'GHSA-hjp8-2cm3-cc45',
+            githubAdvisoryId: 'GHSA-hjp8-2cm3-cc45',
             suppress: {
                 until: '2022-12-31Z',
                 reason: 'Third party',
@@ -71,3 +71,4 @@ Version history
 
 * 1.0.0: Initial release
 * 1.0.1: Ignore licence check
+* 1.0.2: Treat "Unknown error" as failure
