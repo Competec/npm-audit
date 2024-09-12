@@ -32,7 +32,7 @@ module.exports = {
     ],
 }
 ```
-* githubAadvisoryId: The Github Advisory ID of the entry you wish to suppress
+* githubAdvisoryId: The Github Advisory ID of the entry you wish to suppress
 * suppress.until: The validity of the grace period until this audit is finished with error
 * suppress.reason: A note for yourself, to remember why you are suppressing this advisory
 
@@ -72,3 +72,4 @@ Version history
 * 1.0.0: Initial release
 * 1.0.1: Ignore licence check
 * 1.0.2: Treat "Unknown error" as failure
+* 2.0.0: removed `githubAadvisoryId` in favor of `githubAdvisoryId` in `suppressions.js` file

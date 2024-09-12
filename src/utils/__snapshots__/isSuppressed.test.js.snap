@@ -1,10 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should return a logger with info: An advisory has been found... 1`] = `
-Array [
-  Array [
-    "An advisory has been found. You can suppress this in /Users/monikamalecka/shop3/yarn-audit-competec/.yarn-audit-competec/suppressions.js",
-    Object {
+[
+  [
+    "An advisory has been found. You can suppress this in .yarn-audit-competec/suppressions.js",
+    {
+      "findings": "test",
+      "githubAdvisoryId": "id",
+    },
+  ],
+  [
+    "An advisory has been found. You can suppress this in .yarn-audit-competec/suppressions.js",
+    {
       "findings": "test",
       "githubAdvisoryId": "GHSA-hjp8-2cm3-cc45",
     },
@@ -13,10 +20,24 @@ Array [
 `;
 
 exports[`should return a logger with info: Suppression has expired... 1`] = `
-Array [
-  Array [
+[
+  [
+    "An advisory has been found. You can suppress this in .yarn-audit-competec/suppressions.js",
+    {
+      "findings": "test",
+      "githubAdvisoryId": "id",
+    },
+  ],
+  [
+    "An advisory has been found. You can suppress this in .yarn-audit-competec/suppressions.js",
+    {
+      "findings": "test",
+      "githubAdvisoryId": "GHSA-hjp8-2cm3-cc45",
+    },
+  ],
+  [
     "Suppression has expired!",
-    Object {
+    {
       "findings": "test",
       "githubAdvisoryId": "GHSA-hjp8-2cm3-cc45",
     },
