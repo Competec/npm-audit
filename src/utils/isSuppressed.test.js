@@ -5,20 +5,28 @@ const logger = require('./logger');
 jest.mock('./logger');
 const mockedLogger = jest.mocked(logger);
 
+jest.mock('../config', () => ({
+    APP_PREFIX: 'yarn-audit-competec',
+    SUPPRESSION_FILE: `.yarn-audit-competec/suppressions.js`,
+    REPORT_RAW_FILE: 'report-raw.txt',
+    REPORT_STATS_FILE: `.yarn-audit-competec/stats.json`,
+}));
+
+
 test('should return true', () => {
     const suppressionList =
            [
                {
-                   githubAadvisoryId: 'GHSA-hjp8-2cm3-cc45',
+                   githubAdvisoryId: 'GHSA-hjp8-2cm3-cc45',
                    suppress: {
-                       until: '2022-12-31Z',
+                       until: '2030-12-31Z',
                        reason: 'Third party',
                    },
                },
                {
                    githubAdvisoryId: 'GHSA-hhq3-ff78-jv3g',
                    suppress: {
-                       until: '2023-03-31Z',
+                       until: '2030-03-31Z',
                        reason: 'eslint-loader, resolve-url-loader, react-dev-utils',
                    },
                },
@@ -39,7 +47,7 @@ test('should return false', () => {
             {
                 githubAadvisoryId: 'GHSA-hjp8-2cm3-cc45',
                 suppress: {
-                    until: '2022-12-31Z',
+                    until: '2030-12-31Z',
                     reason: 'Third party',
                 },
             },
