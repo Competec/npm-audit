@@ -1,6 +1,6 @@
 {
   "name": "@competec/yarn-audit-competec",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Competec Audit-Modules",
   "private": false,
   "keywords": [
