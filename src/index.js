@@ -35,6 +35,7 @@ const main = async () => {
         cleanupAudit({tmpDir});
     } catch (error) {
         logger.error('Unknown error occured', null, error);
+        process.exit(1);
     }
 };
 
